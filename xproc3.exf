@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script xmlns="http://www.oxygenxml.com/ns/framework/extend"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/framework/extend http://www.oxygenxml.com/ns/framework/extend/frameworkExtensionScript.xsd">
+  
+  <name>XProc 3.0</name>
+  
+  <description>Support for XProc 3.0 in oXygen XML Editor</description>
+  
+  <priority>High</priority>
+
+  <initialPage>Text</initialPage>
+
+  <associationRules>
+    <addRule namespace="http://www.w3.org/ns/xproc-step" 
+             rootElementLocalName="*" 
+             fileName="*" 
+             publicID="*" 
+             javaRuleClass=""
+             attributeLocalName="version" 
+             attributeNamespace="*" 
+             attributeValue="3.0"/>
+  </associationRules>
+
+  <documentTemplates>
+    <addEntry path="${frameworkDir}/templates" position="before"/>
+  </documentTemplates>
+  
+  <classpath>
+    <addEntry path="${framework}/resources"/>
+  </classpath>
+  
+  <xmlCatalogs>
+    <addEntry path="${framework}/resources"/>
+  </xmlCatalogs>
+  
+  <defaultSchema schemaType="rng" 
+                 href="${framework}/schemas/xproc30.rng"/>
+  
+  <validationScenarios>
+    <addScenarios href="${framework}/scenarios/xproc30.scenarios"/>
+  </validationScenarios>
+  
+  <transformationScenarios>
+    <removeScenario name="xproc"/>
+  </transformationScenarios>
+
+</script>
