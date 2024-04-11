@@ -13,3 +13,5 @@ https://raw.githubusercontent.com/transpect/xproc3kit/main/xproc3.add-on.xml
 * editing support
 * templates
 * validation scenario
+
+Please note that oXygen included basic editing and code completion support for XProc with version 26.1.
