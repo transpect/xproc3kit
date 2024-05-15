@@ -1,6 +1,6 @@
 # xproc3kit
 
-XProc 3.0 oXygen Framework
+Framework for XProc 3.0 support in [oXygen XML Editor](https://www.oxygenxml.com/)
   
 ## How to install it
 
